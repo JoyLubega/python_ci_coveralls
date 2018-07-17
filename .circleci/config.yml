@@ -47,7 +47,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            nosetests --with-coverage
+            nosetests --with-coverage --cover-package=src
       - run:
           name: Coverage report
           command: |
