@@ -48,11 +48,8 @@ jobs:
           command: |
             . venv/bin/activate
             nosetests --with-coverage --cover-package=src
-      - run:
-          name: Coverage report
-          command: |
-            coverage report
             coveralls
+            
       - store_artifacts:
           path: test-reports
           destination: test-reports
