@@ -6,7 +6,7 @@ dependencies:
     - pip install -r requirements.txt
 test:
   override:
-    - nosetests tests/math-test.py
+    - nosetests 
   post:
     - coverage run src/*.py
     - coverage report
