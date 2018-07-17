@@ -47,11 +47,10 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            nosetests
+            nosetests --with-coverage
       - run:
           name: Coverage report
           command: |
-            nosetests --with-coverage
             coverage report
             coveralls
       - store_artifacts:
