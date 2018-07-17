@@ -49,6 +49,11 @@ jobs:
           command: |
             . venv/bin/activate
             nosetests
+          post:
+            coverage run src/*.py
+            coverage report
+            coveralls
+          
 
       - store_artifacts:
           path: test-reports
